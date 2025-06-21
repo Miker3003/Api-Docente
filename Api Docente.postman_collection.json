@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "57383e23-2317-498b-9c6d-cb5d1d38bb77",
+		"name": "Api Docente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44656811",
+		"_collection_link": "https://miguelr-2732999.postman.co/workspace/Miguel-R's-Workspace~922bbe11-5289-4154-84e8-c130906a5d7c/collection/44656811-57383e23-2317-498b-9c6d-cb5d1d38bb77?action=share&source=collection_link&creator=44656811"
+	},
+	"item": [
+		{
+			"name": "Crear Docente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipoDocumento\": \"CC\",\r\n  \"numeroDocumento\": \"123456789\",\r\n  \"nombres\": \"Pedro\",\r\n  \"apellidos\": \"Ramírez\",\r\n  \"email\": \"pedro@correo.com\",\r\n  \"area\": \"Física\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/docentes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"docentes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Docentes",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/docentes\n",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"docentes\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar Docente",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipoDocumento\": \"CC\",\r\n  \"numeroDocumento\": \"123456789\",\r\n  \"nombres\": \"Pedro Actualizado\",\r\n  \"apellidos\": \"Ramírez\",\r\n  \"email\": \"pedro.actualizado@correo.com\",\r\n  \"area\": \"Química\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/docentes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"docentes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Docente",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tipoDocumento\": \"CC\",\r\n  \"numeroDocumento\": \"123456789\",\r\n  \"nombres\": \"Pedro\",\r\n  \"apellidos\": \"Ramírez\",\r\n  \"email\": \"pedro@correo.com\",\r\n  \"area\": \"Física\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/docentes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"docentes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
